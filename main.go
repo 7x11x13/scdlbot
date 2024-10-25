@@ -21,10 +21,13 @@ var (
 var s *discordgo.Session
 
 var (
+	dmPermission                   = false
+
 	commands = []*discordgo.ApplicationCommand{
 		{
 			Name:        "scdl",
 			Description: "Download song from SoundCloud as a Discord embed",
+			DMPermission: &dmPermission,
 			Options: []*discordgo.ApplicationCommandOption{
 				{
 					Type:        discordgo.ApplicationCommandOptionString,
