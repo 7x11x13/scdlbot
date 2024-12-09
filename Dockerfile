@@ -17,7 +17,7 @@ RUN apt-get update \
     ffmpeg \
     && rm -fr /var/lib/apt/lists/*
 
-RUN python3 -m pip install scdl==2.12.1
+RUN python3 -m pip install scdl==2.12.3
 
 COPY --from=builder /scdlbot /scdlbot
 
